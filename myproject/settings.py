@@ -36,11 +36,17 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT', default='3306'),
+        'NAME': 'Pharma',  # Your actual database name
+        'USER': 'root',  # Your DB username
+        'PASSWORD': 'root',  # Your DB password
+        'HOST': '192.168.0.11 ',  # or the appropriate DB host
+        'PORT': '3306',  # Default MySQL port
+        'TEST': {
+            'NAME': 'grc',  # The name of the test database
+        },
+    }
+}
+
     }
 }
 
